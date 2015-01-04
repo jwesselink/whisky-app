@@ -1,0 +1,10 @@
+<div class="header"><h1>Whisky App</h1></div>
+
+<ul class="whisky-list">
+	<li class="whisky-list-item" ng-repeat="whisky in whiskies">
+		<a href="#/detail/{{whisky.id}}">
+			<div>{{whisky.name}}</div>
+			<div><small>{{whisky.subName}}</small></div>
+		</a>
+	</li>
+</ul>

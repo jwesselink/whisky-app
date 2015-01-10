@@ -3,7 +3,7 @@
 var demo_data = [
 {
 	id: "1",
-	name : "Laphroaig 10",
+	name : "Laphroaig",
 	subName: "10yo"
 },
 {
@@ -14,7 +14,22 @@ var demo_data = [
 {
 	id: "3",
 	name : "Ardbeg",
-	subName: "10y0"
+	subName: "10yo"
+},
+{
+	id: "4",
+	name : "Lagavullin",
+	subName: "16yo"
+},
+{
+	id: "5",
+	name : "Balvenie",
+	subName: "14 yo - caribbean cask"
+},
+{
+	id: "6",
+	name : "Bruichladdich",
+	subName: "the laddie ten"
 }
 ];
 

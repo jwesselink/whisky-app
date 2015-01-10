@@ -1,0 +1,18 @@
+.header-btn a{
+	position: absolute;
+	padding: 0 0.5em;
+	top: 0px;
+
+	font-size: 18px;
+	line-height: 2.75em;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.header-btn.left a{
+	left: 0px;	
+}
+
+.header-btn.right a{
+	right: 0px;	
+}

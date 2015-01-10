@@ -1,10 +1,22 @@
-<div class="header"><h1>Whisky App</h1></div>
-
+<div class="header">
+	<h1>Whisky App</h1>
+	<div class="header-btn right">
+		<a href="#/views/add-whisky.html">
+			add whisky
+		</a>
+	</div>
+</div>
+<input type="search" ng-model="search" placeholder="find your whisky here">
 <ul class="whisky-list">
-	<li class="whisky-list-item" ng-repeat="whisky in whiskies">
+	<li class="whisky-list-item" ng-repeat="whisky in filteredWhiskies = (whiskies | filter : search | orderBy : 'name')">
 		<a href="#/detail/{{whisky.id}}">
 			<div>{{whisky.name}}</div>
 			<div><small>{{whisky.subName}}</small></div>
+		</a>
+	</li>
+	<li class="whisky-list-item empty-list" ng-hide="filteredWhiskies.length">
+		<a href="#/views/add-whisky.html">
+			I'm sorry, we couldn't find the whisky you're looking for. Click here to add a new one yourself.
 		</a>
 	</li>
 </ul>

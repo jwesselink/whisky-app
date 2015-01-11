@@ -34,7 +34,7 @@ var demo_data = [
 ];
 
 
-angular.module('whiskyApp.list', [])
+angular.module('whiskyApp.ctrl', [])
 
 .controller('ListCtrl', [ '$scope', 
 	function($scope) {
@@ -49,4 +49,11 @@ angular.module('whiskyApp.list', [])
 				$scope.whisky = element;
 			}
 		});
-	}]);;
+	}])
+.controller('AddCtrl' ,[ '$scope',  
+	function($scope) {
+		$scope.save = function() {
+			//TODO
+		};
+	}]);
+

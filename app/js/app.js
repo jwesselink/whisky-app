@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('whiskyApp', [
 	'ngRoute',
-	'whiskyApp.list'
+	'whiskyApp.ctrl'
 	])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -16,5 +16,24 @@ angular.module('whiskyApp', [
 		templateUrl: '/views/whisky-detail.html',
 		controller: 'DetailCtrl'
 	})
+	.when('/new', {
+		templateUrl: '/views/add-whisky.html',
+		controller: 'AddCtrl'
+	})
 	.otherwise({redirectTo: '/list'});
-}]);
+}])
+.directive('backButton', function(){
+    return {
+      restrict: 'A',
+ 
+      link: function(scope, element, attrs) {
+        element.bind('click', goBack);
+ 
+        function goBack() {
+          history.back();
+          scope.$apply();
+        }
+      }
+    }
+});
+

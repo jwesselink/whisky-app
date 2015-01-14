@@ -4,4 +4,35 @@
 	</div>
 	<h1>Add Whisky</h1>
 </div>
-add a whisky here
+
+<form>
+	<div class="addPhotoContainer">
+		add a photo here
+	</div>
+
+	<div>
+		whisky name: 
+		<input name="whiskyName" text="whiskyName" ng-model="whisky.Name">
+	</div>
+	<div>
+		whisky subname: 
+		<input name="whiskySubName" text="whiskySubName" ng-model="whisky.SubName">
+	</div>
+	<div>
+		ABV: 
+		<input name="whiskyABV" text="whiskyABV" ng-model="whisky.ABV">
+	</div>
+	<div>
+		Country 
+		<input name="whiskyCountry" text="whiskyCountry" ng-model="whisky.Country">
+	</div>
+	<div>
+		Region: 
+		<input name="whiskyRegion" text="whiskyRegion" ng-model="whisky.Region">
+	</div>
+	<div>
+		Description: 
+		<input name="whiskyDescription" text="whiskyDescription" ng-model="whisky.Description">
+	</div>
+	<input type="submit" value="save">
+</form>

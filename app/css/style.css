@@ -99,6 +99,7 @@ input{
 	background-image: url("/img/laphroaig_bg.jpg");
 	background-size: 100% auto;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 

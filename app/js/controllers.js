@@ -1,59 +1,26 @@
 'use strict';
 
-var demo_data = [
-{
-	id: "1",
-	name : "Laphroaig",
-	subName: "10yo"
-},
-{
-	id: "2",
-	name : "Laphroaig",
-	subName: "quarter cask"
-},
-{
-	id: "3",
-	name : "Ardbeg",
-	subName: "10yo"
-},
-{
-	id: "4",
-	name : "Lagavullin",
-	subName: "16yo"
-},
-{
-	id: "5",
-	name : "Balvenie",
-	subName: "14 yo - caribbean cask"
-},
-{
-	id: "6",
-	name : "Bruichladdich",
-	subName: "the laddie ten"
-}
-];
-
 
 angular.module('whiskyApp.ctrl', [])
 
-.controller('ListCtrl', [ '$scope', 
-	function($scope) {
-		$scope.whiskies = demo_data;
+.controller('ListCtrl', [ '$scope', 'WhiskyService', 
+	function($scope, whiskyService) {
+		$scope.whiskies = whiskyService.query();
 	}])
 
-.controller('DetailCtrl', [ '$scope', '$routeParams', 
-	function($scope, $routeParams) {
-
-		demo_data.forEach(function(element){	
-			if(element.id === $routeParams.whiskyId){
-				$scope.whisky = element;
-			}
-		});
+.controller('DetailCtrl', [ '$scope', '$routeParams', 'WhiskyService',
+	function($scope, $routeParams, whiskyService) {
+		$scope.whisky = whiskyService.get({id: $routeParams.whiskyId});
 	}])
-.controller('AddCtrl' ,[ '$scope',  
-	function($scope) {
-		$scope.save = function() {
-			//TODO
+.controller('AddCtrl' ,[ '$scope', '$location', 'WhiskyService',  
+	function($scope, $location, whiskyService) {
+		
+		$scope.whisky = new whiskyService();
+
+		$scope.addWhisky = function() {
+			$scope.whisky.$save(function(){
+				$location.path('/list')
+			});
 		};
 	}]);
 

@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('whiskyApp', [
 	'ngRoute',
+	'ngResource',
 	'whiskyApp.ctrl'
 	])
 
@@ -22,6 +23,9 @@ angular.module('whiskyApp', [
 	})
 	.otherwise({redirectTo: '/list'});
 }])
+.factory('WhiskyService', function($resource){
+    return $resource('http://whisky.repsaj.com/api/whisky/:id', {})
+  })
 .directive('backButton', function(){
     return {
       restrict: 'A',

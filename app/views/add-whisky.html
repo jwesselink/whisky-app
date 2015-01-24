@@ -5,56 +5,28 @@
 	<h1>Add Whisky</h1>
 </div>
 
-<<<<<<< Updated upstream
-<form ng-submit="addWhisky()">
-=======
-<form class="addWhiskyForm">
->>>>>>> Stashed changes
+<form id="addWhiskyForm" class="addWhiskyForm" ng-submit="addWhisky()">
 	<div class="addPhotoContainer">
 		<span>+ add a photo here</span>
+		<input type="file" name="photo" />
 	</div>
 
 	<div>
-<<<<<<< Updated upstream
-		whisky name: 
-		<input name="whiskyName" text="whiskyName" ng-model="whisky.name">
+		<input class="whiskyName" name="whiskyName" text="whiskyName" placeholder="Distiller name" ng-model="whisky.name">
+		<input class="whiskySubName" name="whiskySubName" text="whiskySubName" placeholder="Whisky age and name" ng-model="whisky.subName">
+		<input class="whiskyABV" name="whiskyABV" text="whiskyABV" placeholder="alcohol percentage" ng-model="whisky.abv">
 	</div>
 	<div>
-		whisky subname: 
-		<input name="whiskySubName" text="whiskySubName" ng-model="whisky.subName">
-=======
-		<input class="whiskyName" name="whiskyName" text="whiskyName" placeholder="Distiller name" ng-model="whisky.Name">
-		<input class="whiskySubName" name="whiskySubName" text="whiskySubName" placeholder="Whisky age and name" ng-model="whisky.SubName">
-		<input class="whiskyABV" name="whiskyABV" text="whiskyABV" placeholder="alcohol percentage" ng-model="whisky.ABV">
-	</div>
-	<div>
-		<input class="whiskyCountry" name="whiskyCountry" text="whiskyCountry" placeholder="Country of origin" ng-model="whisky.Country">
-		<input class="whiskyRegion" name="whiskyRegion" text="whiskyRegion" placeholder="Region of origin" ng-model="whisky.Region">
->>>>>>> Stashed changes
+		<input class="whiskyCountry" name="whiskyCountry" text="whiskyCountry" placeholder="Country of origin" ng-model="whisky.country">
+		<input class="whiskyRegion" name="whiskyRegion" text="whiskyRegion" placeholder="Region of origin" ng-model="whisky.region">
 	</div>
 	
 	<div>
-<<<<<<< Updated upstream
-		ABV: 
-		<input name="whiskyABV" text="whiskyABV" ng-model="whisky.abv">
-	</div>
-	<div>
-		Country 
-		<input name="whiskyCountry" text="whiskyCountry" ng-model="whisky.country">
-	</div>
-	<div>
-		Region: 
-		<input name="whiskyRegion" text="whiskyRegion" ng-model="whisky.region">
-	</div>
-	<div>
-		Description: 
-		<input name="whiskyDescription" text="whiskyDescription" ng-model="whisky.description">
-=======
-		<textarea class="whiskyDescription" name="whiskyDescription" text="whiskyDescription" placeholder="Whisky description" rows="3" ng-model="whisky.Description">
+		<textarea class="whiskyDescription" name="whiskyDescription" text="whiskyDescription" placeholder="Whisky description" rows="3" ng-model="whisky.description">
 		</textarea>
 	</div>
 	<div class="submitBtn">
-		<a href="">add whisky</a>
->>>>>>> Stashed changes
+		<input type="submit" id="submit" value="Submit" />
+		<!--a href="" onclick="document.getElementById('addWhiskyForm').submit();">add whisky</a-->
 	</div>
 </form>

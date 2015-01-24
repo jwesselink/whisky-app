@@ -19,6 +19,7 @@ time, mark, audio, video {
 	background:transparent;
 
 	font-family: sans-serif;
+	font-size: medium;
 	color: #2c3e50;
 }
 small{
@@ -103,3 +104,95 @@ input{
 }
 
 
+/* Add whisky view*/
+
+.addPhotoContainer{
+	position: relative;
+	width: 100%;
+	height: 30%;
+	text-align: center;
+	background-color: lightgrey;
+	line-height: 100%;
+}
+
+.addPhotoContainer span{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.addWhiskyForm{
+	height: 100%;
+
+}
+
+.addWhiskyForm div{
+	padding: 15px 0px;
+}
+
+.addWhiskyForm div textarea{
+	width: 100%;
+}
+
+
+.addWhiskyForm div input,
+.addWhiskyForm div textarea{
+	padding: 10px;
+	border-style: solid  none;
+	border-color: #DDDDDD;
+	border-width: 1px;
+	margin: 5px 0px !important;
+
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+ 
+.addWhiskyForm div input[type=text]:focus, 
+.addWhiskyForm div textarea:focus {
+  background-color: blue;
+}
+
+
+
+.submitBtn{
+	position: absolute;
+	bottom: 0;
+	-webkit-appearance: none;
+
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+
+	height: 28px;
+	width: calc(100% - 40px);
+	margin: 10px;
+	padding: 10px !important;
+	background-color: lightgrey;
+}
+
+
+.submitBtn a{
+	text-decoration: none;
+}
+
+.submitBtn:active{
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 1px 0px rgba(50, 50, 50, 0.75);
+}
+
+.whiskyName,
+.whiskySubName,
+.whiskyCountry,
+.whiskyRegion{
+	position: relative;
+	float: left;
+	width: calc(50% - 20px);
+}

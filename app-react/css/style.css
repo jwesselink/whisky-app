@@ -1,0 +1,86 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: normal;
+	font-size: 1.02em;
+	color: #2c3e50;
+}
+small{
+	font-size:75%;
+}
+
+#container{
+	height: 100%;
+}
+
+html, body{
+	height: 100%;
+	overflow: hidden;
+}
+
+
+/* Header */
+.header{
+	position: relative;
+	background-color: #474747;
+	text-align: center;
+}
+.header h1{
+	color: #FFFFFF;
+	line-height: 2.75em;
+}
+.header-btn{
+	position: absolute;
+	padding: 0 0.5em;
+	top: 0px;
+	line-height: 2.75em;
+	text-decoration: none;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.header-btn.left{
+	left: 0px;	
+}
+
+.header-btn.right{
+	right: 0px;	
+}
+
+
+
+/* Whisky List view */
+.whisky-list {
+	border: 0 solid #cccccc;
+	border-width: 0 0 1px 1px;
+}
+
+.whisky-list-item{
+	border: 0 solid #cccccc;
+	border-width: 1px 1px 0 0;
+	padding:.25em;
+	cursor: pointer;
+}
+
+
+
+
+
